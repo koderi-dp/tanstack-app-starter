@@ -62,11 +62,11 @@ export const authConfigured = !authDisabled && emailAndPasswordEnabled;
 
 const explicitBaseURL = env("BETTER_AUTH_URL");
 const LOCAL_DEV_ORIGINS: string[] = [
-  "http://localhost:3000",
-  "http://127.0.0.1:3000",
-  "http://[::1]:3000",
+  "http://localhost:3001",
+  "http://127.0.0.1:3001",
+  "http://[::1]:3001",
 ];
-const baseURL = explicitBaseURL ?? "http://localhost:3000";
+const baseURL = explicitBaseURL ?? "http://localhost:3001";
 const secureCookies = baseURL.startsWith("https://");
 const cookiePrefix = secureCookies ? "__Host-starter-auth" : "starter-auth";
 
