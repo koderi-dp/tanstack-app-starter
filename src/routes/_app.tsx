@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "@/ui/layout/app-shell";
-import { UserButton } from "@/ui/auth/gates";
+import { RedirectToSignIn, UserButton } from "@/ui/auth/gates";
+import { useCurrentUserState } from "@/ui/auth/use-current-user";
 import { brand, nav } from "@/nav";
 
 function AppLayout() {
+  const { user, isPending } = useCurrentUserState();
+  // Wait out the session before deciding, then send signed-out visitors to /login.
+  if (isPending) return null;
+  if (!user) return <RedirectToSignIn />;
   return (
     <AppShell
       nav={nav}
