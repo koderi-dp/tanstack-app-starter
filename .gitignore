@@ -1,0 +1,9 @@
+node_modules
+dist
+.output
+.nitro
+.vercel
+*.local
+.env
+data
+src/routeTree.gen.ts
