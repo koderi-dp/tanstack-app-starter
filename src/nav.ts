@@ -1,4 +1,4 @@
-import { Boxes, LayoutDashboard, Settings } from "lucide-react";
+import { Boxes, FolderTree, LayoutDashboard, Settings } from "lucide-react";
 import type { Brand } from "@/ui/layout/app-shell";
 import type { NavConfig } from "@/ui/layout/nav";
 
@@ -7,6 +7,7 @@ export const nav: NavConfig = {
   primary: [
     { to: "/", label: "Dashboard", icon: LayoutDashboard },
     { to: "/items", label: "Items", icon: Boxes },
+    { to: "/tree", label: "Tree", icon: FolderTree },
   ],
   secondary: [{ to: "/settings", label: "Settings", icon: Settings }],
 };
