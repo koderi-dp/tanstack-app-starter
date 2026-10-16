@@ -14,7 +14,6 @@ function AppLayout() {
       nav={nav}
       brand={brand}
       headerEnd={<UserButton collapsed />}
-      sidebarFooter={(collapsed) => <UserButton collapsed={collapsed} />}
       // The detail page scrolls its own panes, so it gets a fixed-height main.
       fullHeight={(pathname) => pathname.startsWith("/items/")}
     />
